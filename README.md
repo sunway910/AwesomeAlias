@@ -1,3 +1,9 @@
+运行脚本：
+
+```
+wget wget https://github.com/0utsiderZhong/AwesomeAlias/blob/main/alias.sh && bash alias.sh
+```
+
 ## Awesome aliases
 
 ### Daily Command
