@@ -88,6 +88,11 @@ sssport()  { ss -ant src :$1 ;}
 ssdport()  { ss -ant dst :$1 ;}
 alias ssssh="ss -o state established '( dport = :ssh or sport = :ssh )'"
 alias sshttp="ss -o state established '( dport = :http or sport = :http )'"
+alias sstatus="systemctl status"
+alias sstart="systemctl restart"
+alias sstop="systemctl stop"
+
+alias ngr="nginx -s reload"
 
 # example: dlog centos
 drun()  { sudo docker run -it --privileged $@ ;}
@@ -125,6 +130,11 @@ alias klog="kubectl logs -f"
 alias knode="kubectl get nodes -o wide"
 kexec() { kubectl exec $1 -n $2 -it -- /bin/bash ;}
 kgetpoy() { kubectl get po $1 -n $2 -o yaml ;}
+
+alias hl="helm list -A"
+alias hi="helm install"
+alias hu="helm uninstall"
+alias ht="helm template"
 
 alias gs="git status"
 alias gst="git status -sb"
