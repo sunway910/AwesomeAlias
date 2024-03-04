@@ -1,7 +1,7 @@
 运行脚本：
 
 ```
-wget https://github.com/0utsiderZhong/AwesomeAlias/blob/main/alias.sh && bash alias.sh
+sudo wget https://github.com/sunway910/AwesomeAlias/blob/main/alias.sh && sudo bash alias.sh
 ```
 
 ## Awesome aliases
@@ -9,106 +9,108 @@ wget https://github.com/0utsiderZhong/AwesomeAlias/blob/main/alias.sh && bash al
 ### Daily Command
 
 ```
-alias "cd-"="cd -"
-alias 。。="cd .."
-alias 。。。="cd ../.."
-alias 。。。。="cd ../../.."
-alias 。。。。。="cd ../../../.."
-alias 。。。。。。="cd ../../../../.."
-alias ..="cd .."
-alias ...="cd ../.."
-alias ....="cd ../../.."
-alias .....="cd ../../../.."
-alias ......="cd ../../../../.."
+alias "cd-"="sudo cd -"
+alias 。。="sudo cd .."
+alias 。。。="sudo cd ../.."
+alias 。。。。="sudo cd ../../.."
+alias 。。。。。="sudo cd ../../../.."
+alias 。。。。。。="sudo cd ../../../../.."
+alias ..="sudo cd .."
+alias ...="sudo cd ../.."
+alias ....="sudo cd ../../.."
+alias .....="sudo cd ../../../.."
+alias ......="sudo cd ../../../../.."
 
-alias ，=","
-alias ；=";"
-alias 。="."
-alias cp="cp -r"
-alias CP="cp -r"
-alias MV="mv"
-alias CD="cd"
-alias ll="ls -alF"
-alias LL="ls -alF"
-alias RM="rm -r"
-alias rm="rm -r"
-alias du="du -sh"
-alias df="df -h"
+alias ，="sudo ,"
+alias ；="sudo ;"
+alias 。="sudo ."
+alias cp="sudo cp -r"
+alias CP="sudo cp -r"
+alias MV="sudo mv"
+alias CD="sudo cd"
+alias ll="sudo ls -alF"
+alias LL="sudo ls -alF"
+alias RM="sudo rm -r"
+alias rm="sudo rm -r"
+alias du="sudo du -sh"
+alias df="sudo df -h"
 port()  { sudo lsof -i:$1 ;}
 
-alias c="clear"
-alias cl="clear"
-alias clr="clear"
-alias ckear="clear"
+alias c="sudo clear"
+alias cl="sudo clear"
+alias clr="sudo clear"
+alias ckear="sudo clear"
 
-alias h="history"
-alias h1="history 10"
-alias h2="history 20"
-alias h3="history 30"
-alias hgrep='history | grep'
+alias h="sudo history"
+alias h1="sudo history 10"
+alias h2="sudo history 20"
+alias h3="sudo history 30"
+alias hgrep='sudo history | grep'
 
-alias sstatus="systemctl status"
-alias srestart="systemctl restart"
-alias sdisable="systemctl disable"
-alias senable="systemctl enable"
-alias sstop="systemctl stop"
+alias sstatus="sudo systemctl status"
+alias srestart="sudo systemctl restart"
+alias sdisable="sudo systemctl disable"
+alias senable="sudo systemctl enable"
+alias sstop="sudo systemctl stop"
 
-alias most='du -hx | sort -rh | head -10'
-alias totaluse='df -hl --total | grep total'
+alias most='sudo du -hx | sort -rh | head -10'
+alias totaluse='sudo df -hl --total | grep total'
 
-alias wget="wget -c"
-alias curl="curl -v"
+alias wget="sudo wget -c"
+alias curl="sudo curl -v"
 
-alias paux='ps aux | grep'
-alias pefww='ps efww | grep'
+alias paux='sudo ps aux | grep'
+alias pefww='sudo ps efww | grep'
 
-alias freem='free -m'
-alias free-m='free -m'
-alias freeg='free -g'
-alias free-g='free -g'
+alias freem='sudo free -m'
+alias free-m='sudo free -m'
+alias freeg='sudo free -g'
+alias free-g='sudo free -g'
 
-alias chown='chown --preserve-root'
-alias chmod='chmod --preserve-root'
-alias chgrp='chgrp --preserve-root'
+alias chown='sudo chown --preserve-root'
+alias chmod='sudo chmod --preserve-root'
+alias chgrp='sudo chgrp --preserve-root'
 
-alias apti="sudo apt install"
-alias aptgi="sudo apt-get install"
-alias aptu="sudo apt update"
-alias aptgu="sudo apt-get update"
+alias apti="sudo sudo apt install"
+alias aptgi="sudo sudo apt-get install"
+alias aptu="sudo sudo apt update"
+alias aptgu="sudo sudo apt-get update"
 
-alias yumu="yum -y update"
-alias yumi="yum -y install"
+alias yumu="sudo yum -y update"
+alias yumi="sudo yum -y install"
 
-alias zypperu="zypper -y update"
-alias zypperi="zypper -y install"
+alias zypperu="sudo zypper -y update"
+alias zypperi="sudo zypper -y install"
 
-alias server2='nohup python -m SimpleHTTPServer &'
-alias server3='nohup python3 -m http.server &'
+alias server2='sudo nohup python -m SimpleHTTPServer &'
+alias server3='sudo nohup python3 -m http.server &'
 
-alias netstat="netstat -anop"
-alias netstatl="netstat -anop | grep -i LISTENING"
+alias netstat="sudo netstat -anop"
+alias netstatl="sudo netstat -anop | grep -i LISTENING"
 
-alias ss="ss -an"
-alias ssl="ss -anl"
-alias sssip="ss -ant src"
-alias ssdip="ss -ant dst"
-alias sss="ss -s"
+alias ss="sudo ss -an"
+alias ssl="sudo ss -anl"
+alias sssip="sudo ss -ant src"
+alias ssdip="sudo ss -ant dst"
+alias sss="sudo ss -s"
 sssport()  { ss -ant src :$1 ;}
 ssdport()  { ss -ant dst :$1 ;}
-alias ssssh="ss -o state established '( dport = :ssh or sport = :ssh )'"
-alias sshttp="ss -o state established '( dport = :http or sport = :http )'"
+alias ssssh="sudo ss -o state established '( dport = :ssh or sport = :ssh )'"
+alias sshttp="sudo ss -o state established '( dport = :http or sport = :http )'"
 
-alias sstatus="systemctl status"
-alias sstart="systemctl restart"
-alias sstop="systemctl stop"
+alias sstatus="sudo systemctl status"
+alias sstart="sudo systemctl restart"
+alias sstop="sudo systemctl stop"
 
-alias ngr="nginx -s reload"
+alias ngr="sudo nginx -s reload"
 ```
 
 
 ### Docker
 ```
 # example: dlog centos
+alias dps='sudo docker ps'
+alias dpsa='sudo docker ps -a'
 drun()  { sudo docker run -it --privileged $@ ;}
 dexec() { sudo docker exec -it $@ /bin/bash ;}
 dlog()  { sudo docker logs -f $@ ;}
@@ -125,52 +127,52 @@ drestart() { sudo docker restart $@  ; }
 
 ### Kubernetes
 ```
-alias k="kubectl"
-alias kapply="kubectl apply -f"
-alias kpatch="kubectl patch -f"
-alias kedit="kubectl edit"
-alias kscale="kubectl scale"
-alias kget="kubectl get"
-alias kgetp="kubectl get po -o wide"
-alias kgets="kubectl get svc -o wide"
-alias kgeti="kubectl get ingress -o wide"
-alias kgetpv="kubectl get pv -o wide"
-alias kgetpvc="kubectl get pvc -o wide"
-alias kgeta="kubectl get all -o wide"
-alias kgetaa="kubectl get all --all-namespaces"
-alias kgetn="kubectl get namespaces"
-alias kinfo="kubectl cluster-info"
-alias kdesc="kubectl describe"
-alias ktop="kubectl top"
-alias klog="kubectl logs -f"
-alias knode="kubectl get nodes -o wide"
+alias k="sudo kubectl"
+alias kapply="sudo kubectl apply -f"
+alias kpatch="sudo kubectl patch -f"
+alias kedit="sudo kubectl edit"
+alias kscale="sudo kubectl scale"
+alias kget="sudo kubectl get"
+alias kgetp="sudo kubectl get po -o wide"
+alias kgets="sudo kubectl get svc -o wide"
+alias kgeti="sudo kubectl get ingress -o wide"
+alias kgetpv="sudo kubectl get pv -o wide"
+alias kgetpvc="sudo kubectl get pvc -o wide"
+alias kgeta="sudo kubectl get all -o wide"
+alias kgetaa="sudo kubectl get all --all-namespaces"
+alias kgetn="sudo kubectl get namespaces"
+alias kinfo="sudo kubectl cluster-info"
+alias kdesc="sudo kubectl describe"
+alias ktop="sudo kubectl top"
+alias klog="sudo kubectl logs -f"
+alias knode="sudo kubectl get nodes -o wide"
 kexec() { kubectl exec $1 -n $2 -it -- /bin/bash ;}
 kgetpoy() { kubectl get po $1 -n $2 -o yaml ;}
 
-alias hl="helm list -A"
-alias hi="helm install"
-alias hu="helm uninstall"
-alias ht="helm template"
+alias hl="sudo helm list -A"
+alias hi="sudo helm install"
+alias hu="sudo helm uninstall"
+alias ht="sudo helm template"
 ```
 
 ### Git
 
 ```
-alias gs="git status"
-alias gst="git status -sb"
-alias gl="git log"
-alias ga="git add"
-alias gaa="git add -A"
-alias gal="git add ."
-alias gall="git add ."
-alias gca="git commit -a"
-alias gc="git commit -m"
-alias gcot="git checkout"
-alias gchekout="git checkout"
-alias gchckout="git checkout"
-alias gckout="git checkout"
-alias go="git push -u origin"
-alias gsh='git stash'
-alias gw='git whatchanged'
-alias nah="git clean -df && git checkout -- ."
+alias gs="sudo git status"
+alias gst="sudo git status -sb"
+alias gl="sudo git log"
+alias ga="sudo git add"
+alias gaa="sudo git add -A"
+alias gal="sudo git add ."
+alias gall="sudo git add ."
+alias gca="sudo git commit -a"
+alias gc="sudo git commit -m"
+alias gcot="sudo git checkout"
+alias gchekout="sudo git checkout"
+alias gchckout="sudo git checkout"
+alias gckout="sudo git checkout"
+alias go="sudo git push -u origin"
+alias gsh='sudo git stash'
+alias gw='sudo git whatchanged'
+alias nah="sudo git clean -df && git checkout -- ."
 ```
