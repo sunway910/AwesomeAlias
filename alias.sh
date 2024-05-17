@@ -76,8 +76,8 @@ alias zypperi="zypper -y install"
 alias server2='nohup python -m SimpleHTTPServer &'
 alias server3='nohup python3 -m http.server &'
 
-alias netstat="netstat -anop"
-alias netstatl="netstat -anop | grep -i LISTENING"
+alias netstat="netstat -alnop"
+alias netstatl="netstat -alnop | grep -i LISTENING"
 
 alias ss="ss -an"
 alias ssl="ss -anl"
@@ -128,8 +128,13 @@ alias kdesc="kubectl describe"
 alias ktop="kubectl top"
 alias klog="kubectl logs -f"
 alias knode="kubectl get nodes -o wide"
-kexec() { kubectl exec $1 -n $2 -it -- /bin/bash ;}
+alias kdelete="sudo kubectl delete"
+kexec() { kubectl exec $1 -n $2 -it -- bash ;}
 kgetpoy() { kubectl get po $1 -n $2 -o yaml ;}
+kdescp() { kubectl describe po $1 -n $2 ;}
+kdescs() { kubectl describe svc $1 -n $2 ;}
+kdesci() { kubectl describe ingress $1 -n $2 ;}
+kdescd() { kubectl describe deployment $1 -n $2 ;}
 
 alias hl="helm list -A"
 alias hi="helm install"

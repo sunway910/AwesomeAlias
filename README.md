@@ -146,8 +146,13 @@ alias kdesc="sudo kubectl describe"
 alias ktop="sudo kubectl top"
 alias klog="sudo kubectl logs -f"
 alias knode="sudo kubectl get nodes -o wide"
-kexec() { kubectl exec $1 -n $2 -it -- /bin/bash ;}
+alias kdelete="sudo kubectl delete"
+kexec() { kubectl exec $1 -n $2 -it -- bash ;}
 kgetpoy() { kubectl get po $1 -n $2 -o yaml ;}
+kdescp() { kubectl describe po $1 -n $2 ;}
+kdescs() { kubectl describe svc $1 -n $2 ;}
+kdesci() { kubectl describe ingress $1 -n $2 ;}
+kdescd() { kubectl describe deployment $1 -n $2 ;}
 
 alias hl="sudo helm list -A"
 alias hi="sudo helm install"
